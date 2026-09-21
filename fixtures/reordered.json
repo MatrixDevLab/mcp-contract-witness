@@ -1,0 +1,7 @@
+{
+  "tools": [
+    {"outputSchema":{"properties":{"ok":{"type":"boolean"}},"type":"object"},"inputSchema":{"properties":{},"type":"object"},"name":"status","description":"Report service status."},
+    {"annotations":{"readOnlyHint":true},"inputSchema":{"required":["text"],"properties":{"text":{"type":"string"}},"type":"object"},"name":"echo","outputSchema":{"type":"object","properties":{"text":{"type":"string"}}},"description":"Return the supplied text."}
+  ],
+  "protocolEra": "2025-06-18"
+}
