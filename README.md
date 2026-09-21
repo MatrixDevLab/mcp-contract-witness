@@ -29,10 +29,10 @@ This audience is a hypothesis, not a claim of adoption.
 
 - [x] Create a dedicated repository and document the boundary.
 - [x] Record primary external evidence and a falsifier.
-- [ ] Define a canonical, secret-free snapshot and typed diff schema.
-- [ ] Add deterministic fixtures for unchanged, additive, breaking, protocol-era,
+- [x] Define a canonical, secret-free snapshot and typed diff schema.
+- [x] Add deterministic fixtures for unchanged, additive, breaking, protocol-era,
       and malformed catalogs.
-- [ ] Ship one reviewable CLI or library entry point.
+- [x] Ship one reviewable CLI or library entry point.
 - [ ] Stop unless an external consumer demonstrates that this offline witness is
       useful without transport or provider-specific adapters.
 
@@ -52,5 +52,7 @@ schema rewriting, or LLM-based semantic comparison belongs in v1.
 
 ## Status
 
-Scaffold only. No implementation or external MCP connection exists yet.
-
+The offline fixture witness is implemented in `witness.py`. It rejects unknown
+fields, sorts tool records and object keys, preserves array order, and reports
+`current`, `changed`, `unknown`, or `incompatible` without connecting to a
+server. No external MCP connection exists.
